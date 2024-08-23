@@ -1,0 +1,120 @@
+ /* Estilo del contenedor principal */
+ .contenedor {
+    text-align: center;
+    margin: 50px auto;
+    width: 540px; /* Mismo ancho que la regla */
+}
+
+/* Estilo del título */
+h1 {
+    font-size: 32px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Estilo del texto grande */
+.valor-grande {
+    font-size: 48px;
+    font-weight: bold;
+    color: #333;
+    margin-top: 20px;
+}
+
+/* Estilo del campo de texto */
+#campoTexto {
+    padding: 10px;
+    font-size: 16px;
+    margin-top: 20px;
+    margin-right: 10px;
+    width: calc(100% - 130px); /* Ajusta el tamaño del input */
+    box-sizing: border-box;
+}
+
+/* Estilo general del contenedor de la regla */
+.regla {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    width: 540px; /* Ajusta según el tamaño que desees */
+    margin: 20px auto;
+    padding: 10px 0;
+    border-top: 2px solid black;
+    position: relative;
+}
+
+/* Estilo de cada marca */
+.marca {
+    position: relative;
+    height: 20px;
+    border-left: 2px solid black;
+}
+
+/* Estilo de los números */
+.marca::after {
+    content: attr(data-num);
+    position: absolute;
+    top: 25px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+/* Marcas largas */
+.marca-5 {
+    height: 30px;
+}
+
+/* Marcas en la base de la regla (corto) */
+.marca-1 {
+    height: 15px;
+    
+}
+ /* Estilo del botón */
+ .btn {
+    padding: 15px 30px;
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 20px; /* Espacio entre la regla y el botón */
+}
+
+.btn:hover {
+    background-color: #0056b3;
+}
+
+/* Contenedor de las tarjetas */
+.tarjetas {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+/* Estilo de las tarjetas */
+.tarjeta {
+    width: 100px;
+    padding: 20px;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    border-radius: 10px;
+    display: none; /* Ocultar tarjetas inicialmente */
+}
+
+.ocultar {
+    display: none;
+}
+
+.tarjeta-roja {
+    background-color: #ff4c4c;
+}
+
+.tarjeta-azul {
+    background-color: #4c6cff;
+}
