@@ -41,17 +41,58 @@ h1 {
     border-top: 2px solid black;
     position: relative;
 }
+/* Estilo para la marca seleccionada por el Jugador 1 */
+.jugador-1::before {
+    content: '▲'; /* Símbolo para el Jugador 1 */
+    position: absolute;
+    top: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 20px;
+    color: red; /* Color del Jugador 1 */
+}
 
+/* Estilo para la marca seleccionada por el Jugador 2 */
+.jugador-2::before {
+    content: '●'; /* Símbolo para el Jugador 2 */
+    position: absolute;
+    top: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 20px;
+    color: blue; /* Color del Jugador 2 */
+}
+.jugador-3::before {
+    content: '■'; /* Símbolo para el Jugador 3 */
+    position: absolute;
+    top: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 20px;
+    color: green; /* Color del Jugador 3 */
+}
 /* Estilo de cada marca */
 .marca {
     position: relative;
     height: 20px;
     border-left: 2px solid black;
+    cursor: pointer;
+}
+
+/* Estilo para la marca seleccionada */
+.marca-seleccionada::before {
+    content: '▲'; /* El símbolo para la marca seleccionada */
+    position: absolute;
+    top: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 20px;
+    color: red;
 }
 
 /* Estilo de los números */
 .marca::after {
-    content: attr(data-num);
+    content: attr(data-num); /* Este muestra los números debajo de las marcas */
     position: absolute;
     top: 25px;
     left: 50%;
@@ -59,7 +100,6 @@ h1 {
     font-size: 14px;
     margin-top: 10px;
 }
-
 /* Marcas largas */
 .marca-5 {
     height: 30px;
